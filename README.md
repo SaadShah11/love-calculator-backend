@@ -1,15 +1,15 @@
 # love-calculator-backend
 
-Listening to Port 8080
+##Listening to Port 8080
 
-Calculating Love Percentage Route:
-Type: POST
-URL: http://localhost:8080/loveCalculator/calculateLove
-Request Object: {
+##Calculating Love Percentage Route:
+*Type: POST
+*URL: http://localhost:8080/loveCalculator/calculateLove
+*Request Object: {
     "firstName":"Adam",
     "secondName":"Sara"
      }
-Response Object: {
+*Response Object: {
   fname: 'Adam',
   sname: 'Sara',
   percentage: '46',
