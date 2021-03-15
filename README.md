@@ -2,7 +2,7 @@
 
 ## Listening to Port 8080
 
-## Calculating Love Percentage Route:
+### Calculating Love Percentage Route:
 * Type: POST
 * URL: http://localhost:8080/loveCalculator/calculateLove
 * Request Object: {
