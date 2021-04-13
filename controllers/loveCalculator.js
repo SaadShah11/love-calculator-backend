@@ -38,7 +38,7 @@ const calculateLove = async (req, res, next) => {
         //if (res.error) throw new Error(res.error);
 
         console.log(res.body);
-        res.status(200).send(JSON.stringify(res.body));
+        //res.status(200).send(JSON.stringify(res.body));
     });
     //let response = res.body;
     //console.log(response)
