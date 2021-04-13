@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Love Calculator</h1>
+
+  <form class="form" #simpleForm="ngForm" (ngSubmit)="sendRequest(simpleForm.value)">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" ngModel name="firstName" class="form-control" placeholder="Name of 1st Person">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input type="text" ngModel name="secondName" class="form-control" placeholder="Name of 2nd Person">
+        </div>
+      </div>
+    </div>
+    <input class="form-control" type="Submit" value="Calculate" class="btn btn-primary">
+  </form>
+
+  <div class="alert alert-primary" role="alert" *ngIf="waitActivation">
+    Wait. We are processing...
+  </div>
+
+  <div *ngIf="loveObject" style="padding-top: 60px">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Love Calculator Results</h5>
+        <h6 class="card-subtitle mb-2 text-muted">The Love calculator shows the following Results</h6>
+        <p class="card-text">{{  loveObject.fname }} and {{ loveObject.sname }} has romantic compatibility of {{ loveObject.percentage }}%.</p>
+        <p class="card-text">Result: {{ loveObject.result }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
