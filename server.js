@@ -4,7 +4,11 @@ const parser = require('body-parser')
 //const parser = require('body-parser')
 const loveCalculatorRoutes = require("./routes/loveCalculator.js")
 
+var cors = require('cors');
+
+
 const app = express()
+app.use(cors());
 
 app.use(parser.json())
 app.use('/loveCalculator', loveCalculatorRoutes)
@@ -16,3 +20,6 @@ app.use((req, res, next) => {
 })
 
 app.listen(8080)
+
+console.log("Server started listening at http://localhost.8080");
+
