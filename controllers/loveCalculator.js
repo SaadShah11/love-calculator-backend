@@ -26,7 +26,7 @@ const calculateLove = async (req, res, next) => {
         "fname": firstName,
         "sname": secondName
     });
-    console.log(res.query)
+    //console.log(res.query)
 
     req.headers({
         "x-rapidapi-key": "0a5ae335a8msh8eb50766018908ep1a2b3ejsnd057c1dd3f70",
@@ -34,12 +34,17 @@ const calculateLove = async (req, res, next) => {
         "useQueryString": true
     });
 
-    req.end(function (res) {
+    req.end(function (res, next) {
         //if (res.error) throw new Error(res.error);
 
         console.log(res.body);
         res.status(200).send(JSON.stringify(res.body));
     });
+    //let response = res.body;
+    //console.log(response)
+    // res.send({ some: 'json' });
+    // res.status(404).send('Sorry, we cannot find that!');
+    // res.status(500).send({ error: 'something blew up' });
 }
 
 exports.calculateLove = calculateLove
