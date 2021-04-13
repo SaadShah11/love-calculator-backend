@@ -16,3 +16,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(8080)
+
+console.log("Server started listening at http://localhost.8080");
