@@ -3,7 +3,7 @@
 ## Listening to Port 8080
 
 ### Calculating Love Percentage Route:
-* Type: POST
+* Type: GET
 * URL: http://localhost:8080/loveCalculator/calculateLove
 * Request Object: {
     "firstName":"Adam",
